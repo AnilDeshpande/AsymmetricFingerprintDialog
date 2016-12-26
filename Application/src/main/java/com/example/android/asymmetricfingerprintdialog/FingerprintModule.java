@@ -34,16 +34,8 @@ import java.security.NoSuchAlgorithmException;
 import java.security.NoSuchProviderException;
 import java.security.Signature;
 
-import dagger.Module;
-import dagger.Provides;
 
-/**
- * Dagger module for Fingerprint APIs.
- */
-@Module(
-        library = true,
-        injects = {MainActivity.class}
-)
+
 public class FingerprintModule {
 
     private final Context mContext;
@@ -52,23 +44,23 @@ public class FingerprintModule {
         mContext = context;
     }
 
-    @Provides
-    public Context providesContext() {
+
+    public Context getContext() {
         return mContext;
     }
 
-    @Provides
-    public FingerprintManager providesFingerprintManager(Context context) {
+
+    public FingerprintManager getFingerprintManager(Context context) {
         return context.getSystemService(FingerprintManager.class);
     }
 
-    @Provides
-    public KeyguardManager providesKeyguardManager(Context context) {
+
+    public KeyguardManager getKeyguardManager(Context context) {
         return context.getSystemService(KeyguardManager.class);
     }
 
-    @Provides
-    public KeyStore providesKeystore() {
+
+    public KeyStore getKeystore() {
         try {
             return KeyStore.getInstance("AndroidKeyStore");
         } catch (KeyStoreException e) {
@@ -76,8 +68,8 @@ public class FingerprintModule {
         }
     }
 
-    @Provides
-    public KeyPairGenerator providesKeyPairGenerator() {
+
+    public KeyPairGenerator getKeyPairGenerator() {
         try {
             return KeyPairGenerator.getInstance(KeyProperties.KEY_ALGORITHM_EC, "AndroidKeyStore");
         } catch (NoSuchAlgorithmException | NoSuchProviderException e) {
@@ -85,8 +77,8 @@ public class FingerprintModule {
         }
     }
 
-    @Provides
-    public Signature providesSignature(KeyStore keyStore) {
+
+    public Signature getSignature(KeyStore keyStore) {
         try {
             return Signature.getInstance("SHA256withECDSA");
         } catch (NoSuchAlgorithmException e) {
@@ -94,18 +86,18 @@ public class FingerprintModule {
         }
     }
 
-    @Provides
-    public InputMethodManager providesInputMethodManager(Context context) {
+
+    public InputMethodManager getInputMethodManager(Context context) {
         return (InputMethodManager) context.getSystemService(Context.INPUT_METHOD_SERVICE);
     }
 
-    @Provides
-    public SharedPreferences providesSharedPreferences(Context context) {
+
+    public SharedPreferences getSharedPreferences(Context context) {
         return PreferenceManager.getDefaultSharedPreferences(context);
     }
 
-    @Provides
-    public StoreBackend providesStoreBackend() {
+
+    public StoreBackend getStoreBackend() {
         return new StoreBackendImpl();
     }
 }

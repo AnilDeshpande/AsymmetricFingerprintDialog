@@ -46,8 +46,6 @@ import java.security.UnrecoverableKeyException;
 import java.security.cert.CertificateException;
 import java.security.spec.ECGenParameterSpec;
 
-import javax.inject.Inject;
-
 /**
  * Main entry point for the sample, showing a backpack and "Purchase" button.
  */
@@ -57,20 +55,34 @@ public class MainActivity extends Activity {
     /** Alias for our key in the Android Key Store */
     public static final String KEY_NAME = "my_key";
 
-    @Inject KeyguardManager mKeyguardManager;
-    @Inject FingerprintManager mFingerprintManager;
-    @Inject FingerprintAuthenticationDialogFragment mFragment;
-    @Inject KeyStore mKeyStore;
-    @Inject KeyPairGenerator mKeyPairGenerator;
-    @Inject Signature mSignature;
-    @Inject SharedPreferences mSharedPreferences;
+    private FingerprintModule fingerprintModule;
+
+    private KeyguardManager mKeyguardManager;
+    private FingerprintManager mFingerprintManager;
+    private FingerprintAuthenticationDialogFragment mFragment;
+    private KeyStore mKeyStore;
+    private KeyPairGenerator mKeyPairGenerator;
+    private Signature mSignature;
+    private SharedPreferences mSharedPreferences;
+
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        ((InjectedApplication) getApplication()).inject(this);
 
         setContentView(R.layout.activity_main);
+
+        fingerprintModule=((InjectedApplication)getApplication()).getFingerprintModule();
+        mKeyguardManager=fingerprintModule.getKeyguardManager(this);
+        mFingerprintManager=fingerprintModule.getFingerprintManager(this);
+        mKeyStore=fingerprintModule.getKeystore();
+        mKeyPairGenerator=fingerprintModule.getKeyPairGenerator();
+        mSignature=fingerprintModule.getSignature(mKeyStore);
+        mSharedPreferences=fingerprintModule.getSharedPreferences(this);
+
+        mFragment=new FingerprintAuthenticationDialogFragment();
+
         Button purchaseButton = (Button) findViewById(R.id.purchase_button);
         if (!mKeyguardManager.isKeyguardSecure()) {
             // Show a message that the user hasn't set up a fingerprint or lock screen.

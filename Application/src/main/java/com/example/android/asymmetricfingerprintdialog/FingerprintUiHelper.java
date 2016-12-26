@@ -16,22 +16,20 @@
 
 package com.example.android.asymmetricfingerprintdialog;
 
-import com.google.common.annotations.VisibleForTesting;
 
 import android.hardware.fingerprint.FingerprintManager;
 import android.os.CancellationSignal;
 import android.widget.ImageView;
 import android.widget.TextView;
 
-import javax.inject.Inject;
 
 /**
  * Small helper class to manage text/icon around fingerprint authentication UI.
  */
 public class FingerprintUiHelper extends FingerprintManager.AuthenticationCallback {
 
-    @VisibleForTesting static final long ERROR_TIMEOUT_MILLIS = 1600;
-    @VisibleForTesting static final long SUCCESS_DELAY_MILLIS = 1300;
+    static final long ERROR_TIMEOUT_MILLIS = 1600;
+    static final long SUCCESS_DELAY_MILLIS = 1300;
 
     private final FingerprintManager mFingerprintManager;
     private final ImageView mIcon;
@@ -39,7 +37,7 @@ public class FingerprintUiHelper extends FingerprintManager.AuthenticationCallba
     private final Callback mCallback;
     private CancellationSignal mCancellationSignal;
 
-    @VisibleForTesting boolean mSelfCancelled;
+    boolean mSelfCancelled;
 
     /**
      * Builder class for {@link FingerprintUiHelper} in which injected fields from Dagger
@@ -48,7 +46,7 @@ public class FingerprintUiHelper extends FingerprintManager.AuthenticationCallba
     public static class FingerprintUiHelperBuilder {
         private final FingerprintManager mFingerPrintManager;
 
-        @Inject
+
         public FingerprintUiHelperBuilder(FingerprintManager fingerprintManager) {
             mFingerPrintManager = fingerprintManager;
         }
@@ -71,12 +69,12 @@ public class FingerprintUiHelper extends FingerprintManager.AuthenticationCallba
         mCallback = callback;
     }
 
-    public boolean isFingerprintAuthAvailable() {
+    public boolean isFingerprintAuthAvailable() throws SecurityException{
         return mFingerprintManager.isHardwareDetected()
                 && mFingerprintManager.hasEnrolledFingerprints();
     }
 
-    public void startListening(FingerprintManager.CryptoObject cryptoObject) {
+    public void startListening(FingerprintManager.CryptoObject cryptoObject) throws SecurityException{
         if (!isFingerprintAuthAvailable()) {
             return;
         }
@@ -144,7 +142,6 @@ public class FingerprintUiHelper extends FingerprintManager.AuthenticationCallba
         mErrorTextView.postDelayed(mResetErrorTextRunnable, ERROR_TIMEOUT_MILLIS);
     }
 
-    @VisibleForTesting
     Runnable mResetErrorTextRunnable = new Runnable() {
         @Override
         public void run() {

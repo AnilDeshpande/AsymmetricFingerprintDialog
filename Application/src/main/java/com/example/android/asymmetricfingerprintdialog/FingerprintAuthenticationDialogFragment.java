@@ -21,6 +21,7 @@ import com.example.android.asymmetricfingerprintdialog.server.Transaction;
 
 import android.app.Activity;
 import android.app.DialogFragment;
+import android.content.Context;
 import android.content.SharedPreferences;
 import android.hardware.fingerprint.FingerprintManager;
 import android.os.Bundle;
@@ -49,8 +50,6 @@ import java.security.cert.CertificateException;
 import java.security.spec.InvalidKeySpecException;
 import java.security.spec.X509EncodedKeySpec;
 
-import javax.inject.Inject;
-
 /**
  * A dialog which uses fingerprint APIs to authenticate the user, and falls back to password
  * authentication if fingerprint is not available.
@@ -73,13 +72,25 @@ public class FingerprintAuthenticationDialogFragment extends DialogFragment
     private FingerprintUiHelper mFingerprintUiHelper;
     private MainActivity mActivity;
 
-    @Inject FingerprintUiHelper.FingerprintUiHelperBuilder mFingerprintUiHelperBuilder;
-    @Inject InputMethodManager mInputMethodManager;
-    @Inject SharedPreferences mSharedPreferences;
-    @Inject StoreBackend mStoreBackend;
+    FingerprintUiHelper.FingerprintUiHelperBuilder mFingerprintUiHelperBuilder;
+    InputMethodManager mInputMethodManager;
+    SharedPreferences mSharedPreferences;
+    StoreBackend mStoreBackend;
 
-    @Inject
-    public FingerprintAuthenticationDialogFragment() {}
+
+    public FingerprintAuthenticationDialogFragment() {
+
+    }
+
+    @Override
+    public void onAttach(Context context) {
+        super.onAttach(context);
+        FingerprintModule fingerprintModule=((InjectedApplication)context.getApplicationContext()).getFingerprintModule();
+        mFingerprintUiHelperBuilder=new FingerprintUiHelper.FingerprintUiHelperBuilder(fingerprintModule.getFingerprintManager(context));
+        mInputMethodManager=fingerprintModule.getInputMethodManager(context);
+        mSharedPreferences=fingerprintModule.getSharedPreferences(context);
+        mStoreBackend=fingerprintModule.getStoreBackend();
+    }
 
     @Override
     public void onCreate(Bundle savedInstanceState) {
@@ -90,6 +101,8 @@ public class FingerprintAuthenticationDialogFragment extends DialogFragment
         setStyle(DialogFragment.STYLE_NORMAL, android.R.style.Theme_Material_Light_Dialog);
 
         // We register a new user account here. Real apps should do this with proper UIs.
+
+
         enroll();
     }
 
