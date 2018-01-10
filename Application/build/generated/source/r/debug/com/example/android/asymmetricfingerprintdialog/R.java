@@ -145,12 +145,16 @@ containing a value of this type.
         public static final int tile=0x7f020005;
     }
     public static final class id {
-        public static final int action_settings=0x7f0b0011;
+        public static final int action_settings=0x7f0b0015;
         public static final int backup_container=0x7f0b0003;
+        public static final int buttonLogin=0x7f0b0013;
         public static final int buttonPanel=0x7f0b0009;
+        public static final int buttonUseFingerPrint=0x7f0b0014;
         public static final int cancel_button=0x7f0b000b;
         public static final int confirmation_message=0x7f0b0001;
         public static final int description=0x7f0b0004;
+        public static final int editTextPassword=0x7f0b0012;
+        public static final int editTextUsername=0x7f0b0011;
         public static final int encrypted_message=0x7f0b0002;
         public static final int fingerprint_container=0x7f0b000d;
         public static final int fingerprint_description=0x7f0b000e;
@@ -166,9 +170,11 @@ containing a value of this type.
     }
     public static final class layout {
         public static final int activity_main=0x7f040000;
-        public static final int fingerprint_dialog_backup=0x7f040001;
-        public static final int fingerprint_dialog_container=0x7f040002;
-        public static final int fingerprint_dialog_content=0x7f040003;
+        public static final int after_login_layout=0x7f040001;
+        public static final int fingerprint_dialog_backup=0x7f040002;
+        public static final int fingerprint_dialog_container=0x7f040003;
+        public static final int fingerprint_dialog_content=0x7f040004;
+        public static final int login_layout=0x7f040005;
     }
     public static final class menu {
         public static final int menu_main=0x7f0a0000;

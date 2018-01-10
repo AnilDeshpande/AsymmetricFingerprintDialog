@@ -19,10 +19,12 @@ package com.example.android.asymmetricfingerprintdialog;
 import com.example.android.asymmetricfingerprintdialog.server.StoreBackend;
 import com.example.android.asymmetricfingerprintdialog.server.StoreBackendImpl;
 
+import android.annotation.TargetApi;
 import android.app.KeyguardManager;
 import android.content.Context;
 import android.content.SharedPreferences;
 import android.hardware.fingerprint.FingerprintManager;
+import android.os.Build;
 import android.preference.PreferenceManager;
 import android.security.keystore.KeyProperties;
 import android.view.inputmethod.InputMethodManager;
@@ -35,8 +37,10 @@ import java.security.NoSuchProviderException;
 import java.security.Signature;
 
 
-
+@TargetApi(Build.VERSION_CODES.M)
 public class FingerprintModule {
+
+
 
     private final Context mContext;
 

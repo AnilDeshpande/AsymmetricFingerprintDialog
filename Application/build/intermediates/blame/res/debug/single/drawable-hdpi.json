@@ -1,7 +1,15 @@
 [
     {
+        "merged": "/Users/anildeshpande/Downloads/AsymmetricFingerprintDialog/Application/build/intermediates/res/merged/debug/drawable-hdpi/ic_fingerprint_success.png",
+        "source": "/Users/anildeshpande/Downloads/AsymmetricFingerprintDialog/Application/build/generated/res/pngs/debug/drawable-hdpi/ic_fingerprint_success.png"
+    },
+    {
         "merged": "/Users/anildeshpande/Downloads/AsymmetricFingerprintDialog/Application/build/intermediates/res/merged/debug/drawable-hdpi/tile.9.png",
         "source": "/Users/anildeshpande/Downloads/AsymmetricFingerprintDialog/Application/src/main/res/drawable-hdpi/tile.9.png"
+    },
+    {
+        "merged": "/Users/anildeshpande/Downloads/AsymmetricFingerprintDialog/Application/build/intermediates/res/merged/debug/drawable-hdpi/ic_fingerprint_error.png",
+        "source": "/Users/anildeshpande/Downloads/AsymmetricFingerprintDialog/Application/build/generated/res/pngs/debug/drawable-hdpi/ic_fingerprint_error.png"
     },
     {
         "merged": "/Users/anildeshpande/Downloads/AsymmetricFingerprintDialog/Application/build/intermediates/res/merged/debug/drawable-hdpi/ic_fp_40px.png",

@@ -17,7 +17,9 @@
 package com.example.android.asymmetricfingerprintdialog;
 
 
+import android.annotation.TargetApi;
 import android.hardware.fingerprint.FingerprintManager;
+import android.os.Build;
 import android.os.CancellationSignal;
 import android.widget.ImageView;
 import android.widget.TextView;
@@ -26,6 +28,7 @@ import android.widget.TextView;
 /**
  * Small helper class to manage text/icon around fingerprint authentication UI.
  */
+@TargetApi(Build.VERSION_CODES.M)
 public class FingerprintUiHelper extends FingerprintManager.AuthenticationCallback {
 
     static final long ERROR_TIMEOUT_MILLIS = 1600;
@@ -123,8 +126,7 @@ public class FingerprintUiHelper extends FingerprintManager.AuthenticationCallba
         mIcon.setImageResource(R.drawable.ic_fingerprint_success);
         mErrorTextView.setTextColor(
                 mErrorTextView.getResources().getColor(R.color.success_color, null));
-        mErrorTextView.setText(
-                mErrorTextView.getResources().getString(R.string.fingerprint_success));
+        mErrorTextView.setText(mErrorTextView.getResources().getString(R.string.fingerprint_success));
         mIcon.postDelayed(new Runnable() {
             @Override
             public void run() {
@@ -135,6 +137,7 @@ public class FingerprintUiHelper extends FingerprintManager.AuthenticationCallba
 
     private void showError(CharSequence error) {
         mIcon.setImageResource(R.drawable.ic_fingerprint_error);
+
         mErrorTextView.setText(error);
         mErrorTextView.setTextColor(
                 mErrorTextView.getResources().getColor(R.color.warning_color, null));

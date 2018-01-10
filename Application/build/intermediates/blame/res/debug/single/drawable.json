@@ -1,14 +1,6 @@
 [
     {
-        "merged": "/Users/anildeshpande/Downloads/AsymmetricFingerprintDialog/Application/build/intermediates/res/merged/debug/drawable/ic_fingerprint_error.xml",
-        "source": "/Users/anildeshpande/Downloads/AsymmetricFingerprintDialog/Application/src/main/res/drawable/ic_fingerprint_error.xml"
-    },
-    {
         "merged": "/Users/anildeshpande/Downloads/AsymmetricFingerprintDialog/Application/build/intermediates/res/merged/debug/drawable/card.xml",
         "source": "/Users/anildeshpande/Downloads/AsymmetricFingerprintDialog/Application/src/main/res/drawable/card.xml"
-    },
-    {
-        "merged": "/Users/anildeshpande/Downloads/AsymmetricFingerprintDialog/Application/build/intermediates/res/merged/debug/drawable/ic_fingerprint_success.xml",
-        "source": "/Users/anildeshpande/Downloads/AsymmetricFingerprintDialog/Application/src/main/res/drawable/ic_fingerprint_success.xml"
     }
 ]

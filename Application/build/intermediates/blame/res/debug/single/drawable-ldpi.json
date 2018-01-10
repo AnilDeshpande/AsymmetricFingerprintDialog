@@ -1,0 +1,10 @@
+[
+    {
+        "merged": "/Users/anildeshpande/Downloads/AsymmetricFingerprintDialog/Application/build/intermediates/res/merged/debug/drawable-ldpi/ic_fingerprint_success.png",
+        "source": "/Users/anildeshpande/Downloads/AsymmetricFingerprintDialog/Application/build/generated/res/pngs/debug/drawable-ldpi/ic_fingerprint_success.png"
+    },
+    {
+        "merged": "/Users/anildeshpande/Downloads/AsymmetricFingerprintDialog/Application/build/intermediates/res/merged/debug/drawable-ldpi/ic_fingerprint_error.png",
+        "source": "/Users/anildeshpande/Downloads/AsymmetricFingerprintDialog/Application/build/generated/res/pngs/debug/drawable-ldpi/ic_fingerprint_error.png"
+    }
+]

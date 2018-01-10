@@ -1,0 +1,10 @@
+[
+    {
+        "merged": "/Users/anildeshpande/Downloads/AsymmetricFingerprintDialog/Application/build/intermediates/res/merged/debug/drawable-anydpi-v21/ic_fingerprint_error.xml",
+        "source": "/Users/anildeshpande/Downloads/AsymmetricFingerprintDialog/Application/build/generated/res/pngs/debug/drawable-anydpi-v21/ic_fingerprint_error.xml"
+    },
+    {
+        "merged": "/Users/anildeshpande/Downloads/AsymmetricFingerprintDialog/Application/build/intermediates/res/merged/debug/drawable-anydpi-v21/ic_fingerprint_success.xml",
+        "source": "/Users/anildeshpande/Downloads/AsymmetricFingerprintDialog/Application/build/generated/res/pngs/debug/drawable-anydpi-v21/ic_fingerprint_success.xml"
+    }
+]

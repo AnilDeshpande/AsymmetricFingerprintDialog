@@ -20,7 +20,7 @@
     android:versionName="1.0" >
 
     <uses-sdk
-        android:minSdkVersion="23"
+        android:minSdkVersion="10"
         android:targetSdkVersion="23" />
 
     <uses-permission android:name="android.permission.USE_FINGERPRINT" />
@@ -31,15 +31,22 @@
         android:icon="@mipmap/ic_launcher"
         android:label="@string/app_name"
         android:theme="@style/AppTheme" >
-        <activity
-            android:name="com.example.android.asymmetricfingerprintdialog.MainActivity"
-            android:label="@string/app_name" >
+
+        <!--
+        <activity android:name=".MainActivity"
+                  android:label="@string/app_name">
+
+        </activity>
+        -->
+
+        <activity android:name="com.example.android.asymmetricfingerprintdialog.LoginActivity" >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+        <activity android:name="com.example.android.asymmetricfingerprintdialog.AfterLoginActivity" />
         <activity
             android:name="com.example.android.asymmetricfingerprintdialog.SettingsActivity"
             android:label="@string/action_settings" />

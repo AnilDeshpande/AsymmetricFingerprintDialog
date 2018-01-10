@@ -11,10 +11,46 @@
     </item>
     <item
         is-multidex="false"
+        jar="/Users/anildeshpande/Downloads/AsymmetricFingerprintDialog/Application/build/intermediates/exploded-aar/com.android.support/cardview-v7/23.3.0/jars/classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="23.0.0"
+        sha1="82ce13fd19cdfde0e392f03c27edeba8d4333648">
+        <dex dex="/Users/anildeshpande/Downloads/AsymmetricFingerprintDialog/Application/build/intermediates/pre-dexed/debug/com.android.support-cardview-v7-23.3.0_48040b1878b27f387c86ec9bd70e489931882454.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/Users/anildeshpande/Downloads/AsymmetricFingerprintDialog/Application/build/intermediates/exploded-aar/com.android.support/support-v4/23.3.0/jars/libs/internal_impl-23.3.0.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.1"
+        sha1="4da5a4d697d32497c6f85567a5112e62fdfd0676">
+        <dex dex="/Users/anildeshpande/Downloads/AsymmetricFingerprintDialog/Application/build/intermediates/pre-dexed/debug/internal_impl-23.3.0_04558b68b6aad7c0e2009cc069607b1df93dc40c.jar" />
+    </item>
+    <item
+        is-multidex="false"
         jar="/Users/anildeshpande/Downloads/AsymmetricFingerprintDialog/Application/build/intermediates/exploded-aar/com.android.support/support-v4/23.3.0/jars/libs/internal_impl-23.3.0.jar"
         jumboMode="false"
         optimize="true"
         revision="23.0.3"
+        sha1="4da5a4d697d32497c6f85567a5112e62fdfd0676">
+        <dex dex="/Users/anildeshpande/Downloads/AsymmetricFingerprintDialog/Application/build/intermediates/pre-dexed/debug/internal_impl-23.3.0_04558b68b6aad7c0e2009cc069607b1df93dc40c.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/Users/anildeshpande/Library/Android/sdk/extras/android/m2repository/com/android/support/support-annotations/23.3.0/support-annotations-23.3.0.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.2"
+        sha1="db7791d75a07fef9844d06236c1c59ba7bf6997c">
+        <dex dex="/Users/anildeshpande/Downloads/AsymmetricFingerprintDialog/Application/build/intermediates/pre-dexed/debug/support-annotations-23.3.0_a2321acd994062326604f073cb93e828dcbe0526.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/Users/anildeshpande/Downloads/AsymmetricFingerprintDialog/Application/build/intermediates/exploded-aar/com.android.support/support-v4/23.3.0/jars/libs/internal_impl-23.3.0.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="23.0.0"
         sha1="4da5a4d697d32497c6f85567a5112e62fdfd0676">
         <dex dex="/Users/anildeshpande/Downloads/AsymmetricFingerprintDialog/Application/build/intermediates/pre-dexed/debug/internal_impl-23.3.0_04558b68b6aad7c0e2009cc069607b1df93dc40c.jar" />
     </item>
@@ -28,20 +64,57 @@
         <dex dex="/Users/anildeshpande/Downloads/AsymmetricFingerprintDialog/Application/build/intermediates/pre-dexed/debug/com.android.support-support-v4-23.3.0_da1745f45930839df23a7d8f00472d2d500d474c.jar" />
     </item>
     <item
+        is-multidex="false"
+        jar="/Users/anildeshpande/Downloads/AsymmetricFingerprintDialog/Application/build/intermediates/exploded-aar/com.android.support/cardview-v7/23.3.0/jars/classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.2"
+        sha1="82ce13fd19cdfde0e392f03c27edeba8d4333648">
+        <dex dex="/Users/anildeshpande/Downloads/AsymmetricFingerprintDialog/Application/build/intermediates/pre-dexed/debug/com.android.support-cardview-v7-23.3.0_48040b1878b27f387c86ec9bd70e489931882454.jar" />
+    </item>
+    <item
+        is-multidex="false"
         jar="/Users/anildeshpande/Downloads/AsymmetricFingerprintDialog/Application/build/intermediates/exploded-aar/com.android.support/support-v13/23.3.0/jars/libs/internal_impl-23.3.0.jar"
         jumboMode="false"
         optimize="true"
-        revision="23.0.3"
+        revision="25.0.2"
         sha1="8813bdcf7583107c4873150075d17c8072ec50cf">
         <dex dex="/Users/anildeshpande/Downloads/AsymmetricFingerprintDialog/Application/build/intermediates/pre-dexed/debug/internal_impl-23.3.0_2ad8905e57b16efce76efcc53870ee4d84adcee9.jar" />
     </item>
     <item
+        is-multidex="false"
+        jar="/Users/anildeshpande/Downloads/AsymmetricFingerprintDialog/Application/build/intermediates/exploded-aar/com.android.support/support-v13/23.3.0/jars/classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="23.0.0"
+        sha1="a809555a2599054c3dcd1bf82b089315ac3a11df">
+        <dex dex="/Users/anildeshpande/Downloads/AsymmetricFingerprintDialog/Application/build/intermediates/pre-dexed/debug/com.android.support-support-v13-23.3.0_06e12e9103c858d9e1f5d10a1ae8da10f7304b43.jar" />
+    </item>
+    <item
         jar="/Users/anildeshpande/Downloads/AsymmetricFingerprintDialog/Application/build/intermediates/exploded-aar/com.android.support/cardview-v7/23.3.0/jars/classes.jar"
         jumboMode="false"
         optimize="true"
         revision="23.0.3"
         sha1="82ce13fd19cdfde0e392f03c27edeba8d4333648">
         <dex dex="/Users/anildeshpande/Downloads/AsymmetricFingerprintDialog/Application/build/intermediates/pre-dexed/debug/com.android.support-cardview-v7-23.3.0_48040b1878b27f387c86ec9bd70e489931882454.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/Users/anildeshpande/Downloads/AsymmetricFingerprintDialog/Application/build/intermediates/exploded-aar/com.android.support/support-v4/23.3.0/jars/classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="23.0.0"
+        sha1="8a034dd16c0dfd75fe86c52c2cd581592acc684a">
+        <dex dex="/Users/anildeshpande/Downloads/AsymmetricFingerprintDialog/Application/build/intermediates/pre-dexed/debug/com.android.support-support-v4-23.3.0_da1745f45930839df23a7d8f00472d2d500d474c.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/Users/anildeshpande/Downloads/AsymmetricFingerprintDialog/Application/build/intermediates/exploded-aar/com.android.support/support-v4/23.3.0/jars/libs/internal_impl-23.3.0.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.2"
+        sha1="4da5a4d697d32497c6f85567a5112e62fdfd0676">
+        <dex dex="/Users/anildeshpande/Downloads/AsymmetricFingerprintDialog/Application/build/intermediates/pre-dexed/debug/internal_impl-23.3.0_04558b68b6aad7c0e2009cc069607b1df93dc40c.jar" />
     </item>
     <item
         jar="/Users/anildeshpande/Library/Android/sdk/extras/android/m2repository/com/android/support/support-annotations/23.3.0/support-annotations-23.3.0.jar"
@@ -65,6 +138,42 @@
         jar="/Users/anildeshpande/Library/Android/sdk/extras/android/m2repository/com/android/support/support-annotations/23.3.0/support-annotations-23.3.0.jar"
         jumboMode="false"
         optimize="true"
+        revision="23.0.0"
+        sha1="db7791d75a07fef9844d06236c1c59ba7bf6997c">
+        <dex dex="/Users/anildeshpande/Downloads/AsymmetricFingerprintDialog/Application/build/intermediates/pre-dexed/debug/support-annotations-23.3.0_a2321acd994062326604f073cb93e828dcbe0526.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/Users/anildeshpande/Downloads/AsymmetricFingerprintDialog/Application/build/intermediates/exploded-aar/com.android.support/support-v13/23.3.0/jars/classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.1"
+        sha1="a809555a2599054c3dcd1bf82b089315ac3a11df">
+        <dex dex="/Users/anildeshpande/Downloads/AsymmetricFingerprintDialog/Application/build/intermediates/pre-dexed/debug/com.android.support-support-v13-23.3.0_06e12e9103c858d9e1f5d10a1ae8da10f7304b43.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/Users/anildeshpande/Downloads/AsymmetricFingerprintDialog/Application/build/intermediates/exploded-aar/com.android.support/support-v4/23.3.0/jars/classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.1"
+        sha1="8a034dd16c0dfd75fe86c52c2cd581592acc684a">
+        <dex dex="/Users/anildeshpande/Downloads/AsymmetricFingerprintDialog/Application/build/intermediates/pre-dexed/debug/com.android.support-support-v4-23.3.0_da1745f45930839df23a7d8f00472d2d500d474c.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/Users/anildeshpande/Downloads/AsymmetricFingerprintDialog/Application/build/intermediates/exploded-aar/com.android.support/cardview-v7/23.3.0/jars/classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.1"
+        sha1="82ce13fd19cdfde0e392f03c27edeba8d4333648">
+        <dex dex="/Users/anildeshpande/Downloads/AsymmetricFingerprintDialog/Application/build/intermediates/pre-dexed/debug/com.android.support-cardview-v7-23.3.0_48040b1878b27f387c86ec9bd70e489931882454.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/Users/anildeshpande/Library/Android/sdk/extras/android/m2repository/com/android/support/support-annotations/23.3.0/support-annotations-23.3.0.jar"
+        jumboMode="false"
+        optimize="true"
         revision="23.0.3"
         sha1="db7791d75a07fef9844d06236c1c59ba7bf6997c">
         <dex dex="/Users/anildeshpande/Downloads/AsymmetricFingerprintDialog/Application/build/intermediates/pre-dexed/debug/support-annotations-23.3.0_a2321acd994062326604f073cb93e828dcbe0526.jar" />
@@ -79,12 +188,31 @@
         <dex dex="/Users/anildeshpande/Downloads/AsymmetricFingerprintDialog/Application/build/intermediates/pre-dexed/debug/com.android.support-cardview-v7-23.3.0_48040b1878b27f387c86ec9bd70e489931882454.jar" />
     </item>
     <item
-        jar="/Users/anildeshpande/Downloads/AsymmetricFingerprintDialog/Application/build/intermediates/exploded-aar/com.android.support/support-v13/23.3.0/jars/classes.jar"
+        is-multidex="false"
+        jar="/Users/anildeshpande/Downloads/AsymmetricFingerprintDialog/Application/build/intermediates/exploded-aar/com.android.support/support-v13/23.3.0/jars/libs/internal_impl-23.3.0.jar"
         jumboMode="false"
         optimize="true"
-        revision="23.0.3"
-        sha1="a809555a2599054c3dcd1bf82b089315ac3a11df">
-        <dex dex="/Users/anildeshpande/Downloads/AsymmetricFingerprintDialog/Application/build/intermediates/pre-dexed/debug/com.android.support-support-v13-23.3.0_06e12e9103c858d9e1f5d10a1ae8da10f7304b43.jar" />
+        revision="25.0.1"
+        sha1="8813bdcf7583107c4873150075d17c8072ec50cf">
+        <dex dex="/Users/anildeshpande/Downloads/AsymmetricFingerprintDialog/Application/build/intermediates/pre-dexed/debug/internal_impl-23.3.0_2ad8905e57b16efce76efcc53870ee4d84adcee9.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/Users/anildeshpande/Downloads/AsymmetricFingerprintDialog/Application/build/intermediates/exploded-aar/com.android.support/support-v4/23.3.0/jars/classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.2"
+        sha1="8a034dd16c0dfd75fe86c52c2cd581592acc684a">
+        <dex dex="/Users/anildeshpande/Downloads/AsymmetricFingerprintDialog/Application/build/intermediates/pre-dexed/debug/com.android.support-support-v4-23.3.0_da1745f45930839df23a7d8f00472d2d500d474c.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/Users/anildeshpande/Library/Android/sdk/extras/android/m2repository/com/android/support/support-annotations/23.3.0/support-annotations-23.3.0.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.1"
+        sha1="db7791d75a07fef9844d06236c1c59ba7bf6997c">
+        <dex dex="/Users/anildeshpande/Downloads/AsymmetricFingerprintDialog/Application/build/intermediates/pre-dexed/debug/support-annotations-23.3.0_a2321acd994062326604f073cb93e828dcbe0526.jar" />
     </item>
     <item
         is-multidex="false"
@@ -102,6 +230,24 @@
         revision="23.0.3"
         sha1="4da5a4d697d32497c6f85567a5112e62fdfd0676">
         <dex dex="/Users/anildeshpande/Downloads/AsymmetricFingerprintDialog/Application/build/intermediates/pre-dexed/debug/internal_impl-23.3.0_04558b68b6aad7c0e2009cc069607b1df93dc40c.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/Users/anildeshpande/Downloads/AsymmetricFingerprintDialog/Application/build/intermediates/exploded-aar/com.android.support/support-v13/23.3.0/jars/classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.2"
+        sha1="a809555a2599054c3dcd1bf82b089315ac3a11df">
+        <dex dex="/Users/anildeshpande/Downloads/AsymmetricFingerprintDialog/Application/build/intermediates/pre-dexed/debug/com.android.support-support-v13-23.3.0_06e12e9103c858d9e1f5d10a1ae8da10f7304b43.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/Users/anildeshpande/Downloads/AsymmetricFingerprintDialog/Application/build/intermediates/exploded-aar/com.android.support/support-v13/23.3.0/jars/libs/internal_impl-23.3.0.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="23.0.0"
+        sha1="8813bdcf7583107c4873150075d17c8072ec50cf">
+        <dex dex="/Users/anildeshpande/Downloads/AsymmetricFingerprintDialog/Application/build/intermediates/pre-dexed/debug/internal_impl-23.3.0_2ad8905e57b16efce76efcc53870ee4d84adcee9.jar" />
     </item>
 
 </items>

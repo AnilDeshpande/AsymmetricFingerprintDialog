@@ -19,11 +19,13 @@ package com.example.android.asymmetricfingerprintdialog;
 import com.example.android.asymmetricfingerprintdialog.server.StoreBackend;
 import com.example.android.asymmetricfingerprintdialog.server.Transaction;
 
+import android.annotation.TargetApi;
 import android.app.Activity;
 import android.app.DialogFragment;
 import android.content.Context;
 import android.content.SharedPreferences;
 import android.hardware.fingerprint.FingerprintManager;
+import android.os.Build;
 import android.os.Bundle;
 import android.view.KeyEvent;
 import android.view.LayoutInflater;
@@ -54,8 +56,18 @@ import java.security.spec.X509EncodedKeySpec;
  * A dialog which uses fingerprint APIs to authenticate the user, and falls back to password
  * authentication if fingerprint is not available.
  */
+@TargetApi(Build.VERSION_CODES.M)
 public class FingerprintAuthenticationDialogFragment extends DialogFragment
         implements TextView.OnEditorActionListener, FingerprintUiHelper.Callback {
+
+    public interface FingerprintAuthenticationListener {
+        String AUTHENTICATION_RESULT="AUTH_RESULT";
+        int FINGER_AUTH_SUCCESS=10;
+        int USE_PASSWORD=20;
+       public void onAuthenticationResult(Bundle bundle);
+    }
+
+    private FingerprintAuthenticationListener listener;
 
     private Button mCancelButton;
     private Button mSecondDialogButton;
@@ -70,7 +82,7 @@ public class FingerprintAuthenticationDialogFragment extends DialogFragment
 
     private FingerprintManager.CryptoObject mCryptoObject;
     private FingerprintUiHelper mFingerprintUiHelper;
-    private MainActivity mActivity;
+    private LoginActivity mActivity;
 
     FingerprintUiHelper.FingerprintUiHelperBuilder mFingerprintUiHelperBuilder;
     InputMethodManager mInputMethodManager;
@@ -103,7 +115,11 @@ public class FingerprintAuthenticationDialogFragment extends DialogFragment
         // We register a new user account here. Real apps should do this with proper UIs.
 
 
-        enroll();
+        //enroll();
+    }
+
+    public void setFingerprintAuthenticationListener(FingerprintAuthenticationListener listener){
+        this.listener=listener;
     }
 
     @Override
@@ -126,7 +142,7 @@ public class FingerprintAuthenticationDialogFragment extends DialogFragment
                 if (mStage == Stage.FINGERPRINT) {
                     goToBackup();
                 } else {
-                    verifyPassword();
+                    //verifyPassword();
                 }
             }
         });
@@ -173,7 +189,7 @@ public class FingerprintAuthenticationDialogFragment extends DialogFragment
     @Override
     public void onAttach(Activity activity) {
         super.onAttach(activity);
-        mActivity = (MainActivity) activity;
+        mActivity = (LoginActivity) activity;
     }
 
     /**
@@ -191,19 +207,27 @@ public class FingerprintAuthenticationDialogFragment extends DialogFragment
     private void goToBackup() {
         mStage = Stage.PASSWORD;
         updateStage();
-        mPassword.requestFocus();
+        /*mPassword.requestFocus();
 
         // Show the keyboard.
-        mPassword.postDelayed(mShowKeyboardRunnable, 500);
+        mPassword.postDelayed(mShowKeyboardRunnable, 500);*/
 
-        // Fingerprint is not used anymore. Stop listening for it.
+        // Fingerprint is not used anymore. Stop listening for it.*/
         mFingerprintUiHelper.stopListening();
+
+        if(listener!=null){
+            Bundle bundle=new Bundle();
+            bundle.putInt(FingerprintAuthenticationListener.AUTHENTICATION_RESULT,FingerprintAuthenticationListener.USE_PASSWORD);
+            listener.onAuthenticationResult(bundle);
+            dismiss();
+        }
+
     }
 
     /**
      * Enrolls a user to the fake backend.
      */
-    private void enroll() {
+    /*private void enroll() {
         try {
             KeyStore keyStore = KeyStore.getInstance("AndroidKeyStore");
             keyStore.load(null);
@@ -224,13 +248,13 @@ public class FingerprintAuthenticationDialogFragment extends DialogFragment
                 IOException | InvalidKeySpecException e) {
             e.printStackTrace();
         }
-    }
+    }*/
 
     /**
      * Checks whether the current entered password is correct, and dismisses the the dialog and lets
      * the activity know about the result.
      */
-    private void verifyPassword() {
+    /*private void verifyPassword() {
         Transaction transaction = new Transaction("user", 1, new SecureRandom().nextLong());
         if (!mStoreBackend.verify(transaction, mPassword.getText().toString())) {
             return;
@@ -250,7 +274,7 @@ public class FingerprintAuthenticationDialogFragment extends DialogFragment
         mPassword.setText("");
         mActivity.onPurchased(null);
         dismiss();
-    }
+    }*/
 
     private final Runnable mShowKeyboardRunnable = new Runnable() {
         @Override
@@ -286,7 +310,7 @@ public class FingerprintAuthenticationDialogFragment extends DialogFragment
     @Override
     public boolean onEditorAction(TextView v, int actionId, KeyEvent event) {
         if (actionId == EditorInfo.IME_ACTION_GO) {
-            verifyPassword();
+            //verifyPassword();
             return true;
         }
         return false;
@@ -296,7 +320,7 @@ public class FingerprintAuthenticationDialogFragment extends DialogFragment
     public void onAuthenticated() {
         // Callback from FingerprintUiHelper. Let the activity know that authentication was
         // successful.
-        mPassword.setText("");
+        /*mPassword.setText("");
         Signature signature = mCryptoObject.getSignature();
         // Include a client nonce in the transaction so that the nonce is also signed by the private
         // key and the backend can verify that the same nonce can't be used to prevent replay
@@ -314,6 +338,12 @@ public class FingerprintAuthenticationDialogFragment extends DialogFragment
             }
         } catch (SignatureException e) {
             throw new RuntimeException(e);
+        }*/
+        if(listener!=null){
+            Bundle bundle=new Bundle();
+            bundle.putInt(FingerprintAuthenticationListener.AUTHENTICATION_RESULT,FingerprintAuthenticationListener.FINGER_AUTH_SUCCESS);
+            listener.onAuthenticationResult(bundle);
+            dismiss();
         }
     }
 

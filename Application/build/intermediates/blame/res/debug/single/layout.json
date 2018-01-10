@@ -1,7 +1,15 @@
 [
     {
+        "merged": "/Users/anildeshpande/Downloads/AsymmetricFingerprintDialog/Application/build/intermediates/res/merged/debug/layout/after_login_layout.xml",
+        "source": "/Users/anildeshpande/Downloads/AsymmetricFingerprintDialog/Application/src/main/res/layout/after_login_layout.xml"
+    },
+    {
         "merged": "/Users/anildeshpande/Downloads/AsymmetricFingerprintDialog/Application/build/intermediates/res/merged/debug/layout/fingerprint_dialog_container.xml",
         "source": "/Users/anildeshpande/Downloads/AsymmetricFingerprintDialog/Application/src/main/res/layout/fingerprint_dialog_container.xml"
+    },
+    {
+        "merged": "/Users/anildeshpande/Downloads/AsymmetricFingerprintDialog/Application/build/intermediates/res/merged/debug/layout/login_layout.xml",
+        "source": "/Users/anildeshpande/Downloads/AsymmetricFingerprintDialog/Application/src/main/res/layout/login_layout.xml"
     },
     {
         "merged": "/Users/anildeshpande/Downloads/AsymmetricFingerprintDialog/Application/build/intermediates/res/merged/debug/layout/fingerprint_dialog_backup.xml",
